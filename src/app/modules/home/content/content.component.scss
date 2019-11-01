@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+
+#mail-content {
+    
+    .flex-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 4rem 6px;
+        
+        .item {
+            flex: 30%;
+            border: 1rem solid purple;
+            padding: 2rem;
+            min-height: 200px;
+            min-width: 200px;
+            margin: 0 10px 10px 0;
+            p {
+                color: red;
+                font-family: 'Pacifico';
+                line-height: 2.4rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+
+
