@@ -1,29 +1,28 @@
 @import '~@angular/material/theming';
 
-#mail-content {
+@mixin content-theme($theme) {
+    $accent: map-get($theme, primary);
+    $background: map-get($theme, background);
+    $background-color: mat-color($background, card);
     
-    .flex-content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 4rem 6px;
+
+    .content {
+        @include mat-elevation(2);
+        background-color: mat-color($accent);
+        border: 1rem solid $background-color;
+        padding: 2rem;
+        min-height: 200px;
+        min-width: 200px;
         
-        .item {
-            flex: 30%;
-            border: 1rem solid purple;
-            padding: 2rem;
-            min-height: 200px;
-            min-width: 200px;
-            margin: 0 10px 10px 0;
-            p {
-                color: red;
-                font-family: 'Pacifico';
-                line-height: 2.4rem;
-                font-size: 2rem;
-            }
+        p {
+            color: $background-color;
+            font-family: 'Pacifico';
+            line-height: 2.4rem;
+            font-size: 2rem;
         }
     }
 }
+
 
 
 

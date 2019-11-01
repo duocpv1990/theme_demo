@@ -1,0 +1,5 @@
+@import '../app/modules/home/content/content.component.scss';
+
+@mixin component-themes($theme) {
+  @include content-theme($theme);
+}

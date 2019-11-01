@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-
-import { ThemeService } from '../../../core/services/theme.service';
 
 
 @Component({
@@ -10,26 +7,13 @@ import { ThemeService } from '../../../core/services/theme.service';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-  isDarkTheme: Observable<boolean>;
-  tiles: string[] = [
-    'Hi there!',
-    'I\'m a custom component',
-    'Toggle the dark theme',
-    'This background is the accent color',
-    'The borders have card background color',
-    'The font is \'Pacifico\'',
-    'The tile list scrolls vertically',
-    'This is the last tile',
-    'Test'
-  ];
-  constructor(private themeService: ThemeService) { }
+  
+  constructor() { }
 
   ngOnInit() {
-    this.isDarkTheme = this.themeService.isDarkTheme;
+    
   }
 
-  toggleDarkTheme(isDarkTheme: boolean) {
-    this.themeService.setDarkTheme(isDarkTheme);
-  }
+  
 
 }

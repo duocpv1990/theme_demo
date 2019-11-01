@@ -1,4 +1,4 @@
-
-    <app-toolbar></app-toolbar>
-    <app-content></app-content>
-
+<app-toolbar></app-toolbar>
+<div class="flex-content">
+    <app-content *ngFor="let tile of tiles">{{ tile }}</app-content>
+</div>

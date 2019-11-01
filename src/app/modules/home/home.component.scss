@@ -1,0 +1,11 @@
+.flex-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3%;
+
+    app-content {
+        flex: 30%;
+        margin: 0 10px 10px 0;
+    }
+}
